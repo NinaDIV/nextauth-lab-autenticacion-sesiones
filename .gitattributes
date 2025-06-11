@@ -1,2 +1,27 @@
-# Auto detect text files and perform LF normalization
+# Archivos de texto
 * text=auto
+
+# Normalizar los finales de línea en los sistemas operativos (Windows/Linux/macOS)
+*.js    text eol=lf
+*.jsx   text eol=lf
+*.ts    text eol=lf
+*.tsx   text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+
+# Archivos específicos
+*.yml   text eol=lf
+*.yaml  text eol=lf
+
+# Archivos binarios
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.svg   binary
+*.ico   binary
+*.mp4   binary
+*.pdf   binary
+
+# Excluir archivos que no deberían ser rastreados por Git
+*.log   text eol=lf
