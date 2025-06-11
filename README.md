@@ -27,4 +27,5 @@ Implementar autenticación segura en una aplicación Next.js usando NextAuth.js 
 ```bash
 npx create-next-app@latest mi-proyecto-nextauth
 cd mi-proyecto-nextauth
-npm install next-auth
+npm install
+yarn install
