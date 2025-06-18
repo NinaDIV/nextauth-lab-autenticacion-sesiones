@@ -1,68 +1,84 @@
+// Dashboard.js
 import { useSession, signOut } from "next-auth/react";
 import { useEffect, useState } from "react";
+import { signIn } from "next-auth/react";
+import styles from "../styles/Dashboard.module.css";
 
 export default function Dashboard() {
   const { data: session, status } = useSession();
   const [loading, setLoading] = useState(true);
 
-  // Esto se ejecuta cuando la sesión ya ha sido cargada
+  // Lógica para manejar el estado de carga
   useEffect(() => {
     if (status !== "loading") {
       setLoading(false);
     }
   }, [status]);
 
-  // Si estamos cargando la sesión, mostramos un "loading"
+  // Función para manejar el inicio de sesión
+  const handleSignIn = () => {
+    signIn("google");
+  };
+
+  // Función para manejar el cierre de sesión
+  const handleSignOut = () => {
+    signOut();
+  };
+
+  // Renderizado condicional: Estado de carga
   if (loading) {
     return (
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
-        <h2>Cargando...</h2>
+      <div className={styles.container}>
+        <div className={styles.loadingMessage}>
+          Cargando...
+        </div>
       </div>
     );
   }
 
-  // Si no hay sesión, mostramos el mensaje de inicio de sesión
+  // Renderizado condicional: Sin sesión
   if (!session) {
     return (
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
-        <h2>No tienes acceso. Inicia sesión.</h2>
-        <button
-          onClick={() => signIn("google")}
-          style={{ padding: "10px 20px", fontSize: "16px", cursor: "pointer" }}
-        >
-          Iniciar sesión con Google
-        </button>
+      <div className={styles.container}>
+        <div className={styles.loginContainer}>
+          <div className={styles.loginMessage}>
+            No tienes acceso. Inicia sesión.
+          </div>
+          <button 
+            onClick={handleSignIn}
+            className={styles.loginButton}
+          >
+            Iniciar sesión con Google
+          </button>
+        </div>
       </div>
     );
   }
 
-  // Si hay sesión, mostramos la información del usuario
+  // Renderizado condicional: Con sesión activa
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Bienvenido, {session.user.name}</h1>
-      <p>Email: {session.user.email}</p>
-      <img
-        src={session.user.image || "/default-profile.png"} // Imagen por defecto en caso de que no haya foto
-        alt="Foto de perfil"
-        width={100}
-        style={{ borderRadius: "50%", marginTop: "20px" }}
-      />
-      <br />
-      <button
-        onClick={() => signOut()}
-        style={{
-          marginTop: "20px",
-          padding: "10px 20px",
-          fontSize: "16px",
-          cursor: "pointer",
-          backgroundColor: "#FF4D4D",
-          color: "white",
-          border: "none",
-          borderRadius: "5px",
-        }}
-      >
-        Cerrar sesión
-      </button>
+    <div className={styles.container}>
+      <div className={styles.welcomeContainer}>
+        {session.user.image && (
+          <img 
+            src={session.user.image} 
+            alt="Foto de perfil"
+            className={styles.profileImage}
+          />
+        )}
+        <h1 className={styles.welcomeTitle}>
+          Bienvenido, {session.user.name}
+        </h1>
+        <p className={styles.userEmail}>
+          Email: {session.user.email}
+        </p>
+        <button 
+          onClick={handleSignOut}
+          className={styles.logoutButton}
+        >
+          Cerrar sesión
+        </button>
+      </div>
     </div>
   );
 }

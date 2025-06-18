@@ -1,0 +1,260 @@
+/* Dashboard.module.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.loadingMessage {
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  display: block;
+}
+
+.loginContainer {
+  text-align: center;
+  padding: 60px 50px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  min-width: 450px;
+  max-width: 500px;
+  width: 100%;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginContainer:hover {
+  transform: translateY(-5px);
+}
+
+.loginMessage {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.loginButton {
+  padding: 18px 36px;
+  font-size: 18px;
+  background: linear-gradient(45deg, #4285f4, #34a853);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(66, 133, 244, 0.3);
+  min-width: 250px;
+}
+
+.loginButton:hover {
+  background: linear-gradient(45deg, #357ae8, #2d8f47);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(66, 133, 244, 0.4);
+}
+
+.loginButton:active {
+  transform: translateY(0);
+}
+
+.welcomeContainer {
+  text-align: center;
+  padding: 60px 50px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  min-width: 500px;
+  max-width: 600px;
+  width: 100%;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcomeContainer:hover {
+  transform: translateY(-5px);
+}
+
+.profileImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  border: 4px solid #667eea;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  object-fit: cover;
+  display: block;
+}
+
+.profileImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.profilePlaceholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #667eea;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.profilePlaceholder:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.profileInitials {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.welcomeTitle {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 700;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  width: 100%;
+}
+
+.userEmail {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 40px;
+  font-weight: 400;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logoutButton {
+  padding: 18px 36px;
+  font-size: 18px;
+  background: linear-gradient(45deg, #FF4D4D, #ff6b6b);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255, 77, 77, 0.3);
+  min-width: 200px;
+}
+
+.logoutButton:hover {
+  background: linear-gradient(45deg, #e03e3e, #ff5252);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 77, 77, 0.4);
+}
+
+.logoutButton:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .welcomeContainer,
+  .loginContainer {
+    min-width: 300px;
+    max-width: 90vw;
+    padding: 40px 30px;
+  }
+  
+  .welcomeTitle {
+    font-size: 28px;
+  }
+  
+  .profileImage,
+  .profilePlaceholder {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profileInitials {
+    font-size: 40px;
+  }
+  
+  .userEmail {
+    font-size: 18px;
+  }
+  
+  .loginButton,
+  .logoutButton {
+    padding: 15px 30px;
+    font-size: 16px;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcomeContainer,
+  .loginContainer {
+    min-width: 280px;
+    padding: 30px 20px;
+  }
+  
+  .welcomeTitle {
+    font-size: 24px;
+  }
+  
+  .profileImage,
+  .profilePlaceholder {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .profileInitials {
+    font-size: 32px;
+  }
+}
