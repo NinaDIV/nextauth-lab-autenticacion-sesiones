@@ -5,8 +5,6 @@
 
 
 
-
-
 ## 🛠️ Tecnologías
 - **Next.js** - Framework React para producción
 - **NextAuth.js** - Solución completa de autenticación
