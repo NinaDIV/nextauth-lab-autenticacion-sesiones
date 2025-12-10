@@ -2,9 +2,7 @@
 
 ## 👨‍💻 Desarrollado por:
 **Milward Fernando Nina Mayta**  
-**Docente:** Renato Usnayo Cáceres  
-**Grupo:** [Completar]  
-**Fecha de Entrega:** [Completar]
+  
 
 ---
 
@@ -32,13 +30,6 @@ cd mi-proyecto-nextauth
 ```
 
 ### 2. Instalar dependencias
-```bash
-npm install next-auth
-# o
-yarn add next-auth
-```
-
-### 3. Instalar dependencias de desarrollo
 ```bash
 npm install
 # o
