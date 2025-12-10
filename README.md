@@ -1,6 +1,7 @@
 # NextAuth - Laboratorio de Autenticación y Manejo de Sesiones
 
-[![Auth](galeria/Auth.png)](galeria/Auth.png)
+![Auth Screenshot](/galeria/Auth.png)
+
 
 
 
