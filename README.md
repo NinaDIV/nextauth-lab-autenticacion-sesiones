@@ -1,7 +1,7 @@
 # NextAuth - Laboratorio de Autenticación y Manejo de Sesiones
 
  
-![Auth screenshot](galeria/Auth.png)
+![Auth screenshot](https://github.com/NinaDIV/nextauth-lab-autenticacion-sesiones/blob/main/galeria/Auth%20.png?raw=true)
 
 
 
